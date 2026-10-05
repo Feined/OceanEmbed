@@ -4,3 +4,5 @@ numpy
 scikit-learn
 xarray
 netCDF4
+pytest
+httpx

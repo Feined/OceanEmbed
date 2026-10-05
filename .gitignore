@@ -44,3 +44,8 @@ dist/
 # Frontend
 node_modules/
 frontend/dist/
+
+# Local runner helpers
+powershell.cmd
+powershell.bat
+

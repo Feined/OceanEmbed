@@ -6,7 +6,11 @@ from pathlib import Path
 from typing import Any
 
 import numpy as np
-import xarray as xr
+
+try:
+    import xarray as xr
+except ImportError:
+    xr = None
 
 from data.field import DEPTHS, generate_field
 from data.synthetic import generate_data
@@ -95,7 +99,9 @@ class NetCDFOceanService:
         }
 
     @staticmethod
-    def _open_dataset(path: str) -> xr.Dataset | None:
+    def _open_dataset(path: str) -> Any:
+        if xr is None:
+            return None
         last_error: Exception | None = None
         for engine in ("netcdf4", "scipy", "h5netcdf"):
             try:
