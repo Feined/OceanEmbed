@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Python tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Scientific datasets
+*.nc
+*.nc4
+*.h5
+*.hdf5
+*.zarr/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Frontend
+node_modules/
+frontend/dist/
